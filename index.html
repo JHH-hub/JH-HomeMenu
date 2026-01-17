@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家味食光 | 定制化家庭菜单</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <header class="header">
+            <div class="logo-area">
+                <h1>🏠 家味食光</h1>
+                <p>无葱蒜 · 随心吃 · 懂偏好</p>
+            </div>
+            <button id="random-pick" class="main-btn">今天吃啥？</button>
+        </header>
+
+        <nav class="filter-nav">
+            <div class="search-box">
+                <input type="text" id="search-bar" placeholder="搜索食材：如土豆、牛肉...">
+            </div>
+            <div class="category-tags">
+                <button class="tag active" data-type="all">全部</button>
+                <button class="tag" data-type="meat">有肉类</button>
+                <button class="tag" data-type="veg">纯素类</button>
+                <button class="tag favorite-tag" data-type="fav">❤️ 我的最爱</button>
+            </div>
+        </nav>
+
+        <main id="menu-grid" class="menu-grid">
+            </main>
+    </div>
+
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-card">
+            <button class="close-btn">&times;</button>
+            <div class="modal-body">
+                <div id="res-icon" class="res-icon"></div>
+                <h2 id="res-name"></h2>
+                <div id="res-tags"></div>
+                <div class="res-ingredients">
+                    <h4>🌿 配料清单 (已检查无葱蒜)</h4>
+                    <p id="res-list"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="re-roll" class="btn-secondary">换一个</button>
+                <button id="accept-btn" class="btn-primary">就吃这个！</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
